@@ -501,7 +501,7 @@ button::-moz-focus-inner {
 	top:0;
 	display:block;
 	width:67px;
-	height:17px;
+	height:30px;
 	background:url('../img/pack_step.png') no-repeat left top;
 	opacity:0;
 	filter:opacity(0);
@@ -510,16 +510,16 @@ button::-moz-focus-inner {
 	background-position:0 0;
 }
 .contest .pack > div span.step2 {
-	background-position:0 -80px;
-}
-.contest .pack > div span.step4 {
 	background-position:0 -40px;
 }
+.contest .pack > div span.step4 {
+	background-position:0 -80px;
+}
 .contest .pack > div span.step3 {
-	background-position:0 -60px;
+	background-position:0 -120px;
 }
 .contest .pack > div span.step5 {
-	background-position:0 -80px;
+	background-position:0 -160px;
 }
 .contest .pack p {
 	position:absolute;
@@ -1040,23 +1040,32 @@ button::-moz-focus-inner {
 	vertical-align:top;
 	margin:0 43px 0 0;
 }
-.winners .list ul li div {
+.winners .list ul li > div {
 	position:relative;
 	width:249px;
 	height:172px;
 	margin:0 0 5px;
 	background:url('../img/winners_list_div.png') no-repeat left top;
 }
-.winners .list ul li div img {
+.winners .list ul li > div > div {
+	overflow:hidden;
 	position:absolute;
 	left:75px;
 	top:41px;
 	width:99px;
 	height:99px;
+	background:none;
 	-webkit-border-radius:50%;
 	-moz-border-radius:50%;
 	border-radius:50%;
 	behavior:url('./pie.htc');
+}
+.winners .list ul li > div > div img {
+	position:absolute;
+	left:0;
+	top:0;
+	width:99px;
+	height:auto;
 }
 .winners .list ul li h3 {
 	font-size:20px;
@@ -1876,4 +1885,395 @@ keyframes pers3s {
 .pause, .pause span {
 	animation-play-state:paused !important;
 	-webkit-animation-play-state:paused !important;
+}
+
+.usermodal {
+	display:none;
+	position:absolute;
+	right:50%;
+	top:82px;
+	z-index:5000;
+	width:295px;
+	padding:14px;
+	margin-right:-467px;
+	background:#ffffff;
+	border:3px solid #000000;
+	-webkit-box-shadow:0 0 15px rgba(0,0,0,0.65);
+	-moz-box-shadow:0 0 15px rgba(0,0,0,0.65);
+	box-shadow:0 0 15px rgba(0,0,0,0.65);
+}
+.usermodal .close {
+	position:absolute;
+	right:-20px;
+	top:-11px;
+	width:55px;
+	height:45px;
+	cursor:pointer;
+	background:url('../img/usermodal_close.png') no-repeat left top;
+}
+.usermodal > div {
+	text-align:right;
+	padding:26px 24px 17px 26px;
+	background:#d8dadc;
+	border:3px solid #000000;
+}
+.usermodal > div p {
+	width:238px;
+	height:40px;
+	padding:1px;
+	text-align:left;
+	margin:0 0 13px;
+	background:url('../img/usermodal_p.png') no-repeat left top;
+}
+.usermodal > div p input {
+	width:206px;
+	color:#000000;
+	font-size:14px;
+	padding:11px 16px;
+}
+.usermodal > div p ::-webkit-input-placeholder {
+	color:#000000;
+}
+.usermodal > div p :-moz-placeholder {
+	color:#000000;
+}
+.usermodal > div p ::-moz-placeholder {
+	color:#000000;
+}
+.usermodal > div p :-ms-input-placeholder {
+	color:#000000;
+}
+.usermodal button {
+	display:inline-block;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	text-align:center;
+	vertical-align:top;
+	cursor:pointer;
+	padding:2px 2px 7px 0;
+	margin:-3px -1px 13px 0;
+	border-bottom-width:0;
+}
+.usermodal button.enter {
+	width:63px;
+	background:url('../img/usermodal_enter_bg.png') no-repeat left top;
+}
+.usermodal button.registration {
+	width:155px;
+	background:url('../img/usermodal_registration_bg.png') no-repeat left top;
+}
+.usermodal h6 {
+	color:#000000;
+	font-size:14px;
+	line-height:14px;
+	font-weight:normal;
+	text-align:left;
+	padding:0;
+	margin:9px 76px 10px 0;
+}
+.usermodal ul {
+	clear:both;
+	overflow:hidden;
+	margin:0 0 13px -3px;
+}
+.usermodal ul li {
+	float:left;
+	margin:0 0 0 6px;
+}
+.usermodal ul li:first-child {
+	margin-left:0;
+}
+.usermodal ul li a {
+	overflow:hidden;
+	position:relative;
+	display:block;
+	width:18px;
+	height:18px;
+}
+.usermodal ul li a img {
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+.fade {
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:5050;
+	width:100%;
+	height:100%;
+	background:url('../img/fade_bg.png') repeat;
+}
+.modal {
+	display:none;
+	position:fixed;
+	left:50%;
+	top:50%;
+	z-index:5100;
+	padding:14px;
+	margin-right:-467px;
+	background:#ffffff;
+	border:3px solid #000000;
+	-webkit-box-shadow:0 0 15px rgba(0,0,0,0.65);
+	-moz-box-shadow:0 0 15px rgba(0,0,0,0.65);
+	box-shadow:0 0 15px rgba(0,0,0,0.65);
+}
+.modal .close {
+	position:absolute;
+	right:-20px;
+	top:-11px;
+	width:55px;
+	height:45px;
+	cursor:pointer;
+	background:url('../img/usermodal_close.png') no-repeat left top;
+}
+.modal > div {
+	background:#d8dadc;
+	border:3px solid #000000;
+}
+.modal iframe {
+	margin:0 0 -4px;
+}
+
+div.registration {
+	position:relative;
+	margin:0 0 14px;
+	background:url('../img/registration_bg.jpg') no-repeat center top;
+	border-top:3px solid #000000;
+	border-bottom:3px solid #000000;
+}
+div.registration:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-17px;
+	width:100%;
+	height:14px;
+	background:#d8dadc;
+}
+div.registration > div {
+	width:960px;
+	padding:25px 0 34px;
+	margin:0 auto;
+}
+div.registration h1 {
+	color:#ffffff;
+	font-size:35px;
+	line-height:35px;
+	font-weight:normal;
+	text-shadow:2px 2px 5px rgba(0,0,0,0.32);
+	padding:0;
+	margin:0 0 23px;
+}
+div.registration p {
+	color:#ffffff;
+	font-size:18px;
+	line-height:21px;
+	margin:0 0 8px;
+}
+div.registration p span {
+	display:block;
+	margin:0 12px 3px;
+}
+div.registration p strong {
+	display:inline-block;
+	width:238px;
+	height:40px;
+	padding:1px;
+	text-align:left;
+	vertical-align:top;
+	background:url('../img/usermodal_p.png') no-repeat left top;
+}
+div.registration p strong input {
+	width:206px;
+	color:#000000;
+	font-size:14px;
+	padding:11px 16px;
+}
+div.registration p strong ::-webkit-input-placeholder {
+	color:#000000;
+}
+div.registration p strong :-moz-placeholder {
+	color:#000000;
+}
+div.registration p strong ::-moz-placeholder {
+	color:#000000;
+}
+div.registration p strong :-ms-input-placeholder {
+	color:#000000;
+}
+div.registration span.tip {
+	display:inline-block !important;
+	width:44px;
+	height:41px;
+	vertical-align:top;
+	cursor:pointer;
+	margin:-1px 0 0 38px;
+	background:url('../img/tip_icon.png') no-repeat left top;
+}
+div.registration .photo {
+	margin:0 0 20px;
+}
+div.registration .photo h6 {
+	color:#ffffff;
+	font-size:18px;
+	line-height:21px;
+	font-weight:normal;
+	padding:0;
+	margin:0 12px 10px;
+}
+div.registration .photo > div {
+	clear:both;
+	overflow:hidden;
+	padding:14px 0 0 174px;
+	margin:0 0 23px;
+}
+div.registration .photo > div p {
+	font-size:14px;
+	line-height:18px;
+	margin:0 0 6px;
+}
+div.registration .photo > div p a {
+	color:#ffffff;
+	text-decoration:none;
+	border-bottom:2px dotted #ffffff;
+}
+div.registration .photo > div p a:hover {
+	border-bottom-width:0;
+}
+div.registration .photo > div > div {
+	position:relative;
+	float:left;
+	width:99px;
+	height:105px;
+	margin:-14px 0 0 -174px;
+}
+div.registration .photo > div > div:before {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:99px;
+	height:99px;
+	background:#ffffff;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	behavior:url('./pie.htc');
+}
+div.registration .photo > div > div > div {
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+	width:99px;
+	height:99px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	behavior:url('./pie.htc');
+}
+div.registration .photo > div > div > div img {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:auto;
+}
+div.registration .photo input[type="file"] {
+	display:none;
+}
+div.registration .photo > p {
+	display:inline-block;
+	width:160px;
+	height:30px;
+	padding:0;
+	text-align:left;
+	vertical-align:top;
+	margin:0 0 13px;
+	background:url('../img/photo_p.png') no-repeat left top;
+}
+div.registration .photo > p input {
+	width:128px;
+	color:#000000;
+	font-size:13px;
+	padding:6px 16px;
+}
+div.registration .photo button {
+	display:inline-block;
+	width:66px;
+	color:#000000;
+	font-size:14px;
+	line-height:17px;
+	text-align:center;
+	vertical-align:top;
+	cursor:pointer;
+	padding:3px 4px 6px 0;
+	margin:3px 0 0 12px;
+	background:url('../img/photo_button.png') no-repeat left top;
+}
+div.registration .photo span.tip {
+	margin-top:-5px;
+}
+div.registration .submit {
+	height:62px;
+	margin:0 0 20px;
+}
+div.registration .submit button {
+	position:relative;
+	overflow:hidden;
+	display:inline-block;
+	width:178px;
+	font-size:24px;
+	line-height:27px;
+	text-align:center;
+	vertical-align:top;
+	cursor:pointer;
+	margin:3px 0 0;
+	padding:14px 0 21px;
+	background:url('../img/contest_form_button.png') no-repeat left top;
+	transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+}
+div.registration .submit button span {
+	position:relative;
+	padding:0 7px 0 0;
+}
+div.registration .submit button:hover {
+	margin:5px 0 -5px;
+}
+div.registration .submit button:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:url('../img/contest_form_button.png') no-repeat left -62px;
+	opacity:0;
+	filter:alpha(opacity=0);
+	transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+}
+div.registration .submit button:hover:before {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+
+
+p.tiptext {
+	position:absolute;
+	z-index:4000;
+	width:260px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:16px;
+	margin:0 0 0 78px;
 }

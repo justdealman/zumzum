@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Семечки Зум Зум</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=1040, user-scalable=yes">
+	<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/timer.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h5><a href="#"><span>Что за семечки Зум-зум?</span></a></h5>
+			<ul>
+				<li><a href="enter">Вход</a></li>
+				<li><a href="registration">Регистрация</a></li>
+			</ul>
+		</div>
+		<div class="registration">
+			<div>
+				<h1>Регистрация</h1>
+				<p><span>Имя :*</span> <strong><input type="text" value="Марфа"></strong></p>
+				<p><span>Фамилия :*</span> <strong><input type="text"></strong></p>
+				<p><span>E-mail :*</span> <strong><input type="text"></strong></p>
+				<p><span>Телефон :*</span> <strong><input type="text"></strong> <span class="tip" data-tip="Ваш телефон не будет отображаться на сайте и использоваться для рекламных рассылок. Обязательно укажите номер для получения приза - перечисление выигрыша на счет телефона."></span></p>
+				<p><span>Город :*</span> <strong><input type="text"></strong></p>
+				<div class="photo">
+					<h6>Аватар:</h6>
+					<div>
+						<div>
+							<div>
+								<img src="./img/winner2.png" width="99" height="99" alt="">
+							</div>
+						</div>
+						<p><a href="select">Выбрать другое фото</a></p>
+						<p><a href="#">Удалить</a></p>
+					</div>
+					<p><input type="text" value="Файл не выбран" disabled></p>
+					<button>Обзор</button>
+					<span class="tip" data-tip="Файл формата jpg, png<br> не более 100х100 px."></span>
+					<input type="file">
+				</div>
+				<div class="submit">
+					<button><span>Сохранить</span></button>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		<div class="copy">
+			<p>ООО “Алтайские Семечки”, 2014г.</p>
+			<p>Все права защищены</p>
+		</div>
+		<p class="author">Разработка сайта - <a href="http://letsrock.pro" target="_blank"><img src="./img/letsrock_logo.png" width="89" height="22" alt=""></a></p>
+	</div>
+	<div class="loading"></div>
+	<span class="cursor"></span>
+	<div class="usermodal" data-modal="enter">
+		<div>
+			<p><input type="text" placeholder="Логин (e-mail)"></p>
+			<p><input type="text" placeholder="Пароль"></p>
+			<button class="enter">Войти</button>
+			<h6>Или войдите с помощью социальной сети</h6>
+			<ul>
+				<li><a href="#"><img src="./img/share_facebook.png" width="18" height="36" alt=""></a></li>
+				<li><a href="#"><img src="./img/share_twitter.png" width="18" height="36" alt=""></a></li>
+				<li><a href="#"><img src="./img/share_vkontakte.png" width="18" height="36" alt=""></a></li>
+				<li><a href="#"><img src="./img/share_odnoklassniki.png" width="18" height="36" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="usermodal" data-modal="registration">
+		<div>
+			<p><input type="text" placeholder="Имя"></p>
+			<p><input type="text" placeholder="Фамилия"></p>
+			<p><input type="text" placeholder="E-mail"></p>
+			<button class="registration">Зарегистрироваться</button>
+			<h6>Или войдите с помощью социальной сети</h6>
+			<ul>
+				<li><a href="#"><img src="./img/share_facebook.png" width="18" height="36" alt=""></a></li>
+				<li><a href="#"><img src="./img/share_twitter.png" width="18" height="36" alt=""></a></li>
+				<li><a href="#"><img src="./img/share_vkontakte.png" width="18" height="36" alt=""></a></li>
+				<li><a href="#"><img src="./img/share_odnoklassniki.png" width="18" height="36" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

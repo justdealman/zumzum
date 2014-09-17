@@ -7,7 +7,7 @@
 			'filter': 'alpha(opacity=1)'
 		}, speed/20);
 		$('.pack .step'+step).animate({
-			'top': '56px'
+			'top': '66px'
 		}, speed*19/20);
 		$('.pack .step'+step).delay(speed).animate({
 			'opacity': '0',
@@ -218,5 +218,66 @@ $(document).ready(function() {
 		$(this).focusout(function(){
 			$(this).attr('placeholder',$(this).data('holder'));
 		});
+	});
+	$('html').bind('click', function() {
+		$('.usermodal').stop(true,true).fadeOut(250);
+	});
+	$('.usermodal').click(function(e) {
+		e.stopPropagation();
+	});
+	$('.usermodal, .modal').append('<span class="close"></span>');
+	$('.usermodal .close').bind('click', function() {
+		$(this).parent().stop(true,true).fadeOut(250);
+		return false;
+	});
+	$('.header ul li a').bind('click', function() {
+		$('.usermodal[data-modal='+$(this).attr('href')+']').stop(true,true).fadeIn(250).siblings('.usermodal').fadeOut(250);
+		return false;
+	});
+	$('.modal').each(function() {
+		$(this).css({
+			'margin-left': -$(this).outerWidth()/2+'px',
+			'margin-top': -$(this).outerHeight()/2+'px'
+		});
+	});
+	var bh = 0;
+	$('.video a').bind('click', function() {
+		$('.modal[data-modal='+$(this).attr('href')+']').stop(true,true).fadeIn(250).siblings('.modal').fadeOut(250);
+		$('.fade').stop(true,true).fadeIn(250);
+		bh = $('body').scrollTop();
+		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		if ( !/(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+			document.getElementById($(this).attr('href')).contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+		}
+		$('.modal .close').bind('click', function() {
+			document.getElementById($(this).parent().attr('data-modal')).contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+		});
+		return false;
+	});
+	$('.modal .close').bind('click', function() {
+		$(this).parent().stop(true,true).fadeOut(250);
+		$('.fade').stop(true,true).fadeOut(250);
+		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('body').scrollTop(bh);
+		return false;
+	});
+	$('span.tip').hover(
+		function() {
+			$('body').append('<p class="tiptext">'+$(this).attr('data-tip')+'</p>');
+			$('p.tiptext').css({
+				'left': $(this).offset().left+'px',
+				'top': $(this).offset().top+'px'
+			});
+		},
+		function() {
+			$('p.tiptext').remove();
+		}
+	);
+	$('.photo a[href=select], .photo button').bind('click', function() {
+		$(this).parents('.photo').find('input[type="file"]').click();
+		return false;
+	});
+	$('.photo input[type=file]').change(function() {
+		$('.photo p input').val($(this).val());
 	});
 });
