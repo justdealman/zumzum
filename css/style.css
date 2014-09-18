@@ -136,6 +136,11 @@ button {
 	-webkit-box-shadow:border-box;
 	box-sizing:border-box;
 }
+div.conditions, div.winners {
+	-moz-box-shadow:border-box;
+	-webkit-box-shadow:border-box;
+	box-sizing:border-box;
+}
 button::-moz-focus-inner {
 	padding:0;
 	border:0;
@@ -1589,12 +1594,10 @@ button::-moz-focus-inner {
 .pers1 {
 	overflow:hidden;
 	position:absolute;
-	left:0;
-	top:678px;
 	z-index:3000;
-	width:295px;
+	width:345px;
 	height:0;
-	margin-left:30px;
+	margin-top:3px;
 	background:url('../img/pers1.png') no-repeat left 94px;
 	animation:pers1 20s infinite linear;
 	-webkit-animation:pers1 20s infinite linear;
@@ -1604,8 +1607,8 @@ button::-moz-focus-inner {
 	position:absolute;
 	right:0;
 	top:0;
-	width:193px;
-	height:106px;
+	width:211px;
+	height:110px;
 	background:url('../img/pers1_quote.png') no-repeat left top;
 	opacity:0;
 	filter:alpha(opacity=0);
@@ -1614,17 +1617,29 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
+.pers1.quote1:after {
+	background-position:0 0;
+}
+.pers1.quote2:after {
+	background-position:0 -110px;
+}
+.pers1.quote3:after {
+	background-position:0 -220px;
+}
+.pers1.quote4:after {
+	background-position:0 -330px;
+}
+.pers1.quote5:after {
+	background-position:0 -440px;
+}
 .pers1:hover:after {
 	opacity:1;
 	filter:alpha(opacity=1);
 }
 .pers1 span {
-	content:'';
 	position:absolute;
 	left:32px;
 	top:37px;
-	width:38px;
-	height:75px;
 	background:url('../img/pers1_name.png') no-repeat left top;
 	opacity:0;
 	filter:alpha(opacity=0);
@@ -1633,10 +1648,10 @@ button::-moz-focus-inner {
 }
 
 @keyframes pers1 {
-	15.15% { height:0; top:678px; }
-	16.65% { height:362px; top:316px; }
-	33.3% { height:362px; top:316px; }
-	34.8% { height:0; top:678px; }
+	15.15% { height:0; margin-top:3px; }
+	16.65% { height:362px; margin-top:-359px; }
+	33.3% { height:362px; margin-top:-359px; }
+	34.8% { height:0; margin-top:3px; }
 }
 @keyframes pers1s {
 	17.65% { opacity:0; }
@@ -1645,10 +1660,10 @@ button::-moz-focus-inner {
 	32.3% { opacity:0; }
 }
 @-webkit-keyframes pers1 {
-	15.15% { height:0; top:678px; }
-	16.65% { height:362px; top:316px; }
-	33.3% { height:362px; top:316px; }
-	34.8% { height:0; top:678px; }
+	15.15% { height:0; margin-top:3px; }
+	16.65% { height:362px; margin-top:-359px; }
+	33.3% { height:362px; margin-top:-359px; }
+	34.8% { height:0; margin-top:3px; }
 }
 @-webkit-keyframes pers1s {
 	17.65% { opacity:0; }
@@ -1660,10 +1675,8 @@ button::-moz-focus-inner {
 .pers2 {
 	overflow:hidden;
 	position:absolute;
-	right:0;
-	top:678px;
 	z-index:3000;
-	width:313px;
+	width:373px;
 	height:0;
 	margin-right:30px;
 	background:url('../img/pers2.png') no-repeat 32px 8px;
@@ -1675,8 +1688,8 @@ button::-moz-focus-inner {
 	position:absolute;
 	right:0;
 	top:9px;
-	width:155px;
-	height:153px;
+	width:211px;
+	height:110px;
 	background:url('../img/pers2_quote.png') no-repeat left top;
 	opacity:0;
 	filter:alpha(opacity=0);
@@ -1684,6 +1697,21 @@ button::-moz-focus-inner {
 	-webkit-transition:all 0.25s ease-in-out;
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
+}
+.pers2.quote1:after {
+	background-position:0 0;
+}
+.pers2.quote2:after {
+	background-position:0 -110px;
+}
+.pers2.quote3:after {
+	background-position:0 -220px;
+}
+.pers2.quote4:after {
+	background-position:0 -330px;
+}
+.pers2.quote5:after {
+	background-position:0 -440px;
 }
 .pers2:hover:after {
 	opacity:1;
@@ -1704,10 +1732,10 @@ button::-moz-focus-inner {
 }
 
 @keyframes pers2 {
-	48.5% { height:0; top:678px; }
-	50% { height:382px; top:296px; }
-	66.6% { height:382px; top:296px; }
-	67.1% { height:0; top:678px; }
+	48.5% { height:0; margin-top:3px; }
+	50% { height:382px; margin-top:-379px; }
+	66.6% { height:382px; margin-top:-379px; }
+	67.1% { height:0; margin-top:3px; }
 }
 @keyframes pers2s {
 	51.5% { opacity:0; }
@@ -1716,10 +1744,10 @@ button::-moz-focus-inner {
 	65.1% { opacity:0; }
 }
 @-webkit-keyframes pers2 {
-	48.5% { height:0; top:678px; }
-	50% { height:382px; top:296px; }
-	66.6% { height:382px; top:296px; }
-	67.1% { height:0; top:678px; }
+	48.5% { height:0; margin-top:3px; }
+	50% { height:382px; margin-top:-379px; }
+	66.6% { height:382px; margin-top:-379px; }
+	67.1% { height:0; margin-top:3px; }
 }
 @-webkit-keyframes pers2s {
 	51.5% { opacity:0; }
@@ -1731,15 +1759,13 @@ button::-moz-focus-inner {
 .pers3 {
 	overflow:hidden;
 	position:absolute;
-	right:0;
-	top:434px;
 	z-index:3000;
 	width:382px;
 	height:0;
 	margin-right:10px;
 	background:url('../img/pers3.png') no-repeat 14px 93px;
-	animation:pers3 40s infinite linear;
-	-webkit-animation:pers3 40s infinite linear;
+	animation:pers3 20s infinite linear;
+	-webkit-animation:pers3 20s infinite linear;
 	opacity:0;
 	filter:alpha(opacity=0);
 }
@@ -1758,6 +1784,15 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
+.pers3.quote1:after {
+	background-position:0 0;
+}
+.pers3.quote2:after {
+	background-position:0 -110px;
+}
+.pers3.quote3:after {
+	background-position:0 -220px;
+}
 .pers3:hover:after {
 	opacity:1;
 	filter:alpha(opacity=1);
@@ -1772,40 +1807,40 @@ button::-moz-focus-inner {
 	background:url('../img/pers3_name.png') no-repeat left top;
 	opacity:0;
 	filter:alpha(opacity=0);
-	animation:pers3s 40s infinite linear;
-	-webkit-animation:pers3s 40s infinite linear;
+	animation:pers3s 20s infinite linear;
+	-webkit-animation:pers3s 20s infinite linear;
 }
 
 keyframes pers3 {
-	41.55% { height:0; }
-	41.6% { height:474px; opacity:0; }
-	42.35% { opacity:1; }
-	49.15% { opacity:1; }
-	49.9% { height:474px; opacity:0; }
-	49.95% { height:0; }
+	83.1% { height:0; }
+	83.2% { height:474px; opacity:0; }
+	84.7% { opacity:1; }
+	98.3% { opacity:1; }
+	98.8% { height:474px; opacity:0; }
+	98.9% { height:0; }
 }
 keyframes pers3s {
-	42.35% { opacity:0; }
-	42.85% { opacity:1; }
-	47.65% { opacity:1; }
-	48.15% { opacity:0; }
+	84.7% { opacity:0; }
+	85.7% { opacity:1; }
+	95.3% { opacity:1; }
+	96.3% { opacity:0; }
 }
 @-webkit-keyframes pers3 {
-	41.55% { height:0; }
-	41.6% { height:474px; opacity:0; }
-	42.35% { opacity:1; }
-	49.15% { opacity:1; }
-	49.9% { height:474px; opacity:0; }
-	49.95% { height:0; }
+	83.1% { height:0; }
+	83.2% { height:474px; opacity:0; }
+	84.7% { opacity:1; }
+	98.3% { opacity:1; }
+	98.8% { height:474px; opacity:0; }
+	98.9% { height:0; }
 }
 @-webkit-keyframes pers3s {
-	42.35% { opacity:0; }
-	42.85% { opacity:1; }
-	47.65% { opacity:1; }
-	48.15% { opacity:0; }
+	84.7% { opacity:0; }
+	85.7% { opacity:1; }
+	95.3% { opacity:1; }
+	96.3% { opacity:0; }
 }
 
-.pers4 {
+/*.pers4 {
 	overflow:hidden;
 	position:absolute;
 	left:0;
@@ -1880,7 +1915,7 @@ keyframes pers3s {
 	92.85% { opacity:1; }
 	97.65% { opacity:1; }
 	98.15% { opacity:0; }
-}
+}*/
 
 .pause, .pause span {
 	animation-play-state:paused !important;
@@ -2266,7 +2301,6 @@ div.registration .submit button:hover:before {
 	opacity:1;
 	filter:alpha(opacity=100);
 }
-
 
 p.tiptext {
 	position:absolute;

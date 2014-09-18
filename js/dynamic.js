@@ -172,6 +172,7 @@ $(window).resize(function() {
 });
 $(document).ready(function() {
 	persposition();
+	$('.pers1, .pers2, .pers3, .pers4').addClass('pause');
 	$('.pers1, .pers2, .pers3, .pers4').hover(
 		function() {
 			$('.pers1, .pers2, .pers3, .pers4').addClass('pause');
@@ -280,4 +281,75 @@ $(document).ready(function() {
 	$('.photo input[type=file]').change(function() {
 		$('.photo p input').val($(this).val());
 	});
+});
+$(window).load(function() {
+	$('.pers1, .pers2, .pers3, .pers4').removeClass('pause');
+	var line = [
+		$('.contest').offset().top+$('.contest').height(),
+		$('.conditions').offset().top+$('.conditions').height(),
+		$('.winners').offset().top+$('.winners').height()-3,
+		$('.moreinfo').offset().top+$('.moreinfo').height(),
+		$('.results').offset().top+$('.results').height()-3,
+		$('.footer').offset().top+$('.footer').height()
+	]
+	var a = 0;
+	function pers1() {
+		$('.pers1').css({
+			'left': Math.random()*($(window).width()-$('.pers1').outerWidth())+'px',
+			'top': line[Math.floor(Math.random()*line.length)]+'px'
+		});
+		var am = 5;
+		a++;
+		if ( a > am ) {
+			a = 1;
+		}
+		for ( var i = 1; i < am+1; i++ ) {
+			$('.pers1').removeClass('quote'+i);
+		}
+		$('.pers1').addClass('quote'+a);
+	}
+	var b = 0;
+	function pers2() {
+		$('.pers2').css({
+			'left': Math.random()*($(window).width()-$('.pers2').outerWidth())+'px',
+			'top': line[Math.floor(Math.random()*line.length)]+'px'
+		});
+		var bm = 5;
+		b++;
+		if ( b > bm ) {
+			b = 1;
+		}
+		for ( var i = 1; i < bm+1; i++ ) {
+			$('.pers2').removeClass('quote'+i);
+		}
+		$('.pers2').addClass('quote'+b);
+	}
+	var c = 0;
+	function pers3() {
+		$('.pers3').css({
+			'left': Math.random()*($(window).width()-$('.pers3').outerWidth())+'px',
+			'top': Math.random()*($('.wrapper').height()-$('.pers3').outerHeight())+'px'
+		});
+		var cm = 3;
+		c++;
+		if ( c > cm ) {
+			c = 1;
+		}
+		for ( var i = 1; i < cm+1; i++ ) {
+			$('.pers3').removeClass('quote'+i);
+		}
+		$('.pers3').addClass('quote'+c);
+	}
+	pers1();
+	pers2();
+	pers3();
+	$('.pers1').bind('animationiteration webkitAnimationIteration oanimationiteration MSAnimationIteration', function() {
+		pers1();
+	});	
+	$('.pers2').bind('animationiteration webkitAnimationIteration oanimationiteration MSAnimationIteration', function() {
+		pers2();
+	});
+	$('.pers3').bind('animationiteration webkitAnimationIteration oanimationiteration MSAnimationIteration', function() {
+		pers3();
+	});	
 });
