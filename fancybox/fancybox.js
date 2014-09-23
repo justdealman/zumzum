@@ -1095,15 +1095,15 @@
 	};
 
 	$.fn.fancybox.defaults = {
-		padding : 10,
-		margin : 40,
+		padding : 14,
+		margin : 30,
 		opacity : false,
 		modal : false,
 		cyclic : false,
 		scrolling : 'auto',	// 'auto', 'yes' or 'no'
 
-		width : 560,
-		height : 340,
+		width : 920,
+		height : 580,
 
 		autoScale : true,
 		autoDimensions : true,
@@ -1116,16 +1116,16 @@
 		hideOnContentClick : false,
 
 		overlayShow : true,
-		overlayOpacity : 0.7,
-		overlayColor : '#777',
+		overlayOpacity : 0.5,
+		overlayColor : '#000',
 
-		titleShow : true,
+		titleShow : false,
 		titlePosition : 'float', // 'float', 'outside', 'inside' or 'over'
 		titleFormat : null,
 		titleFromAlt : false,
 
-		transitionIn : 'fade', // 'elastic', 'fade' or 'none'
-		transitionOut : 'fade', // 'elastic', 'fade' or 'none'
+		transitionIn : 'elastic', // 'elastic', 'fade' or 'none'
+		transitionOut : 'elastic', // 'elastic', 'fade' or 'none'
 
 		speedIn : 300,
 		speedOut : 300,
