@@ -1599,8 +1599,8 @@ button::-moz-focus-inner {
 	height:0;
 	margin-top:3px;
 	background:url('../img/pers1.png') no-repeat left 94px;
-	animation:pers1 20s infinite linear;
-	-webkit-animation:pers1 20s infinite linear;
+	animation:pers1 10s infinite linear;
+	-webkit-animation:pers1 10s infinite linear;
 }
 .pers1:after {
 	content:'';
@@ -1643,8 +1643,8 @@ button::-moz-focus-inner {
 	background:url('../img/pers1_name.png') no-repeat left top;
 	opacity:0;
 	filter:alpha(opacity=0);
-	animation:pers1s 20s infinite linear;
-	-webkit-animation:pers1s 20s infinite linear;
+	animation:pers1s 10s infinite linear;
+	-webkit-animation:pers1s 10s infinite linear;
 }
 
 @keyframes pers1 {
@@ -1680,8 +1680,8 @@ button::-moz-focus-inner {
 	height:0;
 	margin-right:30px;
 	background:url('../img/pers2.png') no-repeat 32px 8px;
-	animation:pers2 20s infinite linear;
-	-webkit-animation:pers2 20s infinite linear;
+	animation:pers2 10s infinite linear;
+	-webkit-animation:pers2 10s infinite linear;
 }
 .pers2:after {
 	content:'';
@@ -1727,8 +1727,8 @@ button::-moz-focus-inner {
 	background:url('../img/pers2_name.png') no-repeat left top;
 	opacity:0;
 	filter:alpha(opacity=0);
-	animation:pers2s 20s infinite linear;
-	-webkit-animation:pers2s 20s infinite linear;
+	animation:pers2s 10s infinite linear;
+	-webkit-animation:pers2s 10s infinite linear;
 }
 
 @keyframes pers2 {
@@ -1764,8 +1764,8 @@ button::-moz-focus-inner {
 	height:0;
 	margin-right:10px;
 	background:url('../img/pers3.png') no-repeat 14px 93px;
-	animation:pers3 20s infinite linear;
-	-webkit-animation:pers3 20s infinite linear;
+	animation:pers3 10s infinite linear;
+	-webkit-animation:pers3 10s infinite linear;
 	opacity:0;
 	filter:alpha(opacity=0);
 }
@@ -1807,8 +1807,8 @@ button::-moz-focus-inner {
 	background:url('../img/pers3_name.png') no-repeat left top;
 	opacity:0;
 	filter:alpha(opacity=0);
-	animation:pers3s 20s infinite linear;
-	-webkit-animation:pers3s 20s infinite linear;
+	animation:pers3s 10s infinite linear;
+	-webkit-animation:pers3s 10s infinite linear;
 }
 
 keyframes pers3 {
