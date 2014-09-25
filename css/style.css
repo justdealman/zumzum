@@ -190,6 +190,9 @@ button::-moz-focus-inner {
 	margin-left:190px;
 	background:url('../img/header_before.png') no-repeat left top;
 }
+.header.logged:before {
+	margin-left:8px;
+}
 .header h5 {
 	position:absolute;
 	left:50%;
@@ -273,6 +276,29 @@ button::-moz-focus-inner {
 	margin:-2px -2px -7px 0;
 	border-bottom-width:0;
 	background:url('../img/header_enter_bg.png') no-repeat left top;
+}
+.header > div {
+	position:absolute;
+	right:50%;
+	top:18px;
+	padding:0 41px 0 0;
+	margin-right:-480px;
+}
+.header > div p {
+	font-size:14px;
+	line-height:18px;
+	font-weight:bold;
+	text-align:right;
+	margin:0;
+}
+.header > div button {
+	position:absolute;
+	right:-1px;
+	top:4px;
+	width:31px;
+	height:39px;
+	cursor:pointer;
+	background:url('../img/exit_icon.png') no-repeat left top;
 }
 
 /* Index */
@@ -359,10 +385,39 @@ button::-moz-focus-inner {
 	text-shadow:none;
 	text-indent:-33px;
 }
+.contest.waiting h2 {
+	width:260px;
+	font-size:35px;
+	line-height:27px;
+	margin:0 0 37px;
+}
+.contest.waiting h2 span:nth-child(2) {
+	margin-left:41px;
+}
+.contest.waiting h2 span:nth-child(3) {
+	margin-left:-3px;
+}
+.contest.waiting h2:after {
+	left:227px;
+	top:64px;
+}
+.contest.waiting h2 em {
+	left:426px;
+	top:106px;
+}
+.contest > div > p {
+	position:relative;
+	z-index:10;
+	width:170px;
+	color:#ffffff;
+	font-size:16px;
+	line-height:18px;
+	margin:0 0 18px;
+}
 .contest .form {
 	margin:0 0 15px;
 }
-.contest .form h4 {
+.contest h4 {
 	position:relative;
 	color:#ffffff;
 	font-size:40px;
@@ -371,9 +426,9 @@ button::-moz-focus-inner {
 	text-shadow:5px 5px 5px rgba(0,0,0,0.2);
 	text-shadow:none\0;
 	padding:0;
-	margin:0 180px 26px 0;
+	margin:-2px 180px 26px 0;
 }
-.contest .form h4:after {
+.contest h4:after {
 	content:'';
 	position:absolute;
 	left:278px;
@@ -381,6 +436,16 @@ button::-moz-focus-inner {
 	width:40px;
 	height:70px;
 	background:url('../img/contest_form_h4_after.png') no-repeat left top;
+}
+.contest.waiting h4 {
+	z-index:10;
+	width:180px;
+	font-size:25px;
+	line-height:22px;
+	margin:0 0 30px;
+}
+.contest.waiting h4:after {
+	display:none;
 }
 .contest .form > div {
 	height:47px;
@@ -408,7 +473,7 @@ button::-moz-focus-inner {
 	padding:5px 6px 15px;
 	margin:0;
 }
-.contest .form button {
+.contest button {
 	position:relative;
 	overflow:hidden;
 	display:inline-block;
@@ -426,14 +491,20 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.5s ease-in-out;
 	-o-transition:all 0.5s ease-in-out;
 }
-.contest .form button span {
+.contest.waiting button {
+	position:absolute;
+	left:-1px;
+	top:393px;
+	z-index:10;
+}
+.contest button span {
 	position:relative;
 	padding:0 7px 0 0;
 }
-.contest .form button:hover {
+.contest button:hover {
 	margin:-1px 0 -16px;
 }
-.contest .form button:before {
+.contest button:before {
 	content:'';
 	position:absolute;
 	left:0;
@@ -448,7 +519,7 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.5s ease-in-out;
 	-o-transition:all 0.5s ease-in-out;
 }
-.contest .form button:hover:before {
+.contest button:hover:before {
 	opacity:1;
 	filter:alpha(opacity=100);
 }
@@ -459,6 +530,27 @@ button::-moz-focus-inner {
 	font-weight:normal;
 	padding:0;
 	margin:0 0 19px;
+}
+.contest.waiting h5 {
+	position:absolute;
+	left:0;
+	top:503px;
+	width:640px;
+	color:#ffffff;
+	font-size:22px;
+	line-height:24px;
+	font-weight:normal;
+	padding:0;
+	margin:0;
+}
+.contest.waiting h5:before {
+	content:'';
+	position:absolute;
+	left:166px;
+	top:-48px;
+	width:31px;
+	height:36px;
+	background:url('../img/contest_h5_before.png') no-repeat left top;
 }
 .contest h3 {
 	width:981px;
@@ -618,6 +710,9 @@ button::-moz-focus-inner {
 	background:#ffffff;
 	border-top:3px solid #000000;
 	border-bottom:3px solid #000000;
+}
+.conditions.locked:after {
+	display:none;
 }
 .conditions .icon1 {
 	position:absolute;
@@ -1811,7 +1906,7 @@ button::-moz-focus-inner {
 	-webkit-animation:pers3s 10s infinite linear;
 }
 
-keyframes pers3 {
+@keyframes pers3 {
 	83.1% { height:0; }
 	83.2% { height:474px; opacity:0; }
 	84.7% { opacity:1; }
@@ -1819,7 +1914,7 @@ keyframes pers3 {
 	98.8% { height:474px; opacity:0; }
 	98.9% { height:0; }
 }
-keyframes pers3s {
+@keyframes pers3s {
 	84.7% { opacity:0; }
 	85.7% { opacity:1; }
 	95.3% { opacity:1; }
@@ -2310,4 +2405,343 @@ p.tiptext {
 	font-size:14px;
 	line-height:16px;
 	margin:0 0 0 78px;
+}
+
+.contest .element1 {
+	position:absolute;
+	left:160px;
+	top:340px;
+	width:74px;
+	height:130px;
+	background:url('../img/element1.png') no-repeat left top;
+}
+.contest .element2 {
+	position:absolute;
+	left:292px;
+	top:34px;
+	width:58px;
+	height:208px;
+	background:url('../img/element2.png') no-repeat left top;
+}
+.contest .boiler {
+	position:absolute;
+	left:158px;
+	top:32px;
+	z-index:3;
+	width:289px;
+	height:410px;
+	background:url('../img/boiler_bg.png') no-repeat left top;
+	animation:core 1s infinite linear;
+    animation-direction:reverse;
+	-webkit-animation:core 1s infinite linear;
+	-webkit-animation-direction:alternate-reverse;
+}
+.contest .boiler > div {
+	position:absolute;
+	left:64px;
+	top:202px;
+	width:220px;
+	height:208px;
+}
+.contest .boiler > div > div {
+	position:absolute;
+	left:0;
+	top:0;
+	width:220px;
+	height:208px;
+}
+.contest .boiler .inside span {
+	position:absolute;
+	display:block;
+	animation:boiler infinite linear;
+	animation-duration:1s;
+	-webkit-animation:boiler infinite linear;
+	-webkit-animation-duration:1s;
+}
+.contest .boiler div:hover .inside span {
+	animation-duration:0.75s;
+	-webkit-animation-duration:0.75s;
+}
+.contest .boiler .inside span:nth-child(1) {
+	left:40px;
+	top:44px;
+	width:29px;
+	height:40px;
+	background:url('../img/boiler/inside_icon1.png') no-repeat left top;
+	animation-delay:-0.99s;
+	-webkit-animation-delay:-0.99s;
+}
+.contest .boiler .inside span:nth-child(2) {
+	left:91px;
+	top:42px;
+	width:25px;
+	height:43px;
+	background:url('../img/boiler/inside_icon2.png') no-repeat left top;
+	animation-delay:-0.88s;
+	-webkit-animation-delay:-0.88s;
+}
+.contest .boiler .inside span:nth-child(3) {
+	left:139px;
+	top:40px;
+	width:41px;
+	height:27px;
+	background:url('../img/boiler/inside_icon3.png') no-repeat left top;
+	animation-delay:-0.77s;
+	-webkit-animation-delay:-0.77s;
+}
+.contest .boiler .inside span:nth-child(4) {
+	left:78px;
+	top:80px;
+	width:23px;
+	height:51px;
+	background:url('../img/boiler/inside_icon4.png') no-repeat left top;
+	animation-delay:-0.66s;
+	-webkit-animation-delay:-0.66s;
+}
+.contest .boiler .inside span:nth-child(5) {
+	left:118px;
+	top:77px;
+	width:27px;
+	height:58px;
+	background:url('../img/boiler/inside_icon5.png') no-repeat left top;
+	animation-delay:-0.55s;
+	-webkit-animation-delay:-0.55s;
+}
+.contest .boiler .inside span:nth-child(6) {
+	left:157px;
+	top:76px;
+	width:25px;
+	height:43px;
+	background:url('../img/boiler/inside_icon6.png') no-repeat left top;
+	animation-delay:-0.44s;
+	-webkit-animation-delay:-0.44s;
+}
+.contest .boiler .inside span:nth-child(7) {
+	left:46px;
+	top:118px;
+	width:17px;
+	height:45px;
+	background:url('../img/boiler/inside_icon7.png') no-repeat left top;
+	animation-delay:-0.33s;
+	-webkit-animation-delay:-0.33s;
+}
+.contest .boiler .inside span:nth-child(8) {
+	left:103px;
+	top:130px;
+	width:30px;
+	height:40px;
+	background:url('../img/boiler/inside_icon8.png') no-repeat left top;
+	animation-delay:-0.22s;
+	-webkit-animation-delay:-0.22s;
+}
+.contest .boiler .inside span:nth-child(9) {
+	left:142px;
+	top:133px;
+	width:39px;
+	height:35px;
+	background:url('../img/boiler/inside_icon9.png') no-repeat left top;
+	animation-delay:-0.11s;
+	-webkit-animation-delay:-0.11s;
+}
+
+@-webkit-keyframes core {
+	0% { -webkit-transform: translate(2px, 1px) }
+	10% { -webkit-transform: translate(-1px, -2px) }
+	20% { -webkit-transform: translate(-2px, 0px) }
+	30% { -webkit-transform: translate(0px, 2px) }
+	40% { -webkit-transform: translate(1px, -1px) }
+	50% { -webkit-transform: translate(-1px, 2px) }
+	60% { -webkit-transform: translate(-3px, 1px) }
+	70% { -webkit-transform: translate(2px, 1px) }
+	80% { -webkit-transform: translate(-1px, -1px) }
+	90% { -webkit-transform: translate(2px, 2px) }
+	100% { -webkit-transform: translate(2px, 1px) }
+}
+@keyframes core {
+	0% { transform: translate(2px, 1px) }
+	10% { transform: translate(-1px, -2px) }
+	20% { transform: translate(-2px, 0px) }
+	30% { transform: translate(0px, 2px) }
+	40% { transform: translate(1px, -1px) }
+	50% { transform: translate(-1px, 2px) }
+	60% { transform: translate(-3px, 1px) }
+	70% { transform: translate(2px, 1px) }
+	80% { transform: translate(-1px, -1px) }
+	90% { transform: translate(2px, 2px) }
+	100% { transform: translate(2px, 1px) }
+}
+
+@-webkit-keyframes boiler {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-5deg); }
+	20% { -webkit-transform: translate(-2px, 0px) rotate(5deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(5deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-5deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-5deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(5deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+}
+@keyframes boiler {
+	0% { transform: translate(2px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-5deg); }
+	20% { transform: translate(-2px, 0px) rotate(5deg); }
+	30% { transform: translate(0px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(5deg); }
+	50% { transform: translate(-1px, 2px) rotate(-5deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(2px, 1px) rotate(-5deg); }
+	80% { transform: translate(-1px, -1px) rotate(5deg); }
+	90% { transform: translate(2px, 2px) rotate(0deg); }
+	100% { transform: translate(2px, 1px) rotate(0deg); }
+}
+
+.contest .boiler .outside span {
+	position:absolute;
+	display:block;
+	top:108px;
+	left:90px;
+	width:40px;
+	height:280px;
+	margin-top:-150px;
+	animation:outside infinite linear;
+	animation-duration:2s;
+	-webkit-animation:outside infinite linear;
+	-webkit-animation-duration:2s;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.contest .boiler div.outside span em {
+	position:absolute;
+	left:0;
+	top:0;
+	display:block;
+	width:40px;
+	height:40px;
+	transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+}
+.contest .boiler .outside span:nth-child(1) {
+	-webkit-transform:rotate(-65deg);
+	transform:rotate(-65deg);
+}
+.contest .boiler .outside span:nth-child(1) em {
+	background:url('../img/boiler/outside_icon1.png') no-repeat center center;
+	-webkit-transform:rotate(25deg);
+	transform:rotate(25deg);
+}
+.contest .boiler > div:hover .outside span:nth-child(1) em {
+	-webkit-transform:rotate(25deg) scale(1.5);
+	transform:rotate(25deg) scale(1.5);
+}
+.contest .boiler .outside span:nth-child(2) {
+	-webkit-transform:rotate(-35deg);
+	transform:rotate(-35deg);
+}
+.contest .boiler .outside span:nth-child(2) em {
+	background:url('../img/boiler/outside_icon2.png') no-repeat center center;
+	-webkit-transform:rotate(25deg);
+	transform:rotate(25deg);
+}
+.contest .boiler > div:hover .outside span:nth-child(2) em {
+	-webkit-transform:rotate(25deg) scale(1.5);
+	transform:rotate(25deg) scale(1.5);
+}
+.contest .boiler .outside span:nth-child(3) {
+	-webkit-transform:rotate(30deg);
+	transform:rotate(30deg);
+}
+.contest .boiler .outside span:nth-child(3) em {
+	background:url('../img/boiler/outside_icon3.png') no-repeat center center;
+	-webkit-transform:rotate(-65deg);
+	transform:rotate(-65deg);
+}
+.contest .boiler div:hover .outside span:nth-child(3) em {
+	-webkit-transform:rotate(-65deg) scale(1.5);
+	transform:rotate(-65deg) scale(1.5);
+}
+.contest .boiler > div:hover .outside span:nth-child(3) em {
+	-webkit-transform:rotate(-65deg) scale(1.5);
+	transform:rotate(-65deg) scale(1.5);
+}
+.contest .boiler .outside span:nth-child(4) {
+	-webkit-transform:rotate(60deg);
+	transform:rotate(60deg);
+}
+.contest .boiler .outside span:nth-child(4) em {
+	background:url('../img/boiler/outside_icon4.png') no-repeat center center;
+	-webkit-transform:rotate(-60deg);
+	transform:rotate(-60deg);
+}
+.contest .boiler > div:hover .outside span:nth-child(4) em {
+	-webkit-transform:rotate(-60deg) scale(1.5);
+	transform:rotate(-60deg) scale(1.5);
+}
+.contest .boiler .outside span:nth-child(5) {
+	-webkit-transform:rotate(125deg);
+	transform:rotate(125deg);
+}
+.contest .boiler .outside span:nth-child(5) em {
+	background:url('../img/boiler/outside_icon5.png') no-repeat center center;
+	-webkit-transform:rotate(-100deg);
+}
+.contest .boiler .outside > div:hover span:nth-child(5) em {
+	-webkit-transform:rotate(-100deg) scale(1.5);
+	transform:rotate(-100deg) scale(1.5);
+}
+.contest .boiler .outside span:nth-child(6) {
+	-webkit-transform:rotate(145deg);
+	transform:rotate(145deg);
+}
+.contest .boiler .outside span:nth-child(6) em {
+	background:url('../img/boiler/outside_icon6.png') no-repeat center center;
+	-webkit-transform:rotate(-145deg);
+	transform:rotate(-145deg);
+}
+.contest .boiler > div:hover .outside span:nth-child(6) em {
+	-webkit-transform:rotate(-145deg) scale(1.5);
+	transform:rotate(-145deg) scale(1.5);
+}
+.contest .boiler .outside span:nth-child(7) {
+	-webkit-transform:rotate(190deg);
+	transform:rotate(190deg);
+}
+.contest .boiler .outside span:nth-child(7) em {
+	background:url('../img/boiler/outside_icon7.png') no-repeat center center;
+	-webkit-transform:rotate(-165deg);
+	transform:rotate(-165deg);
+}
+.contest .boiler > div:hover .outside span:nth-child(7) em {
+	-webkit-transform:rotate(-165deg) scale(1.5);
+	transform:rotate(-165deg) scale(1.5);
+}
+.contest .boiler .outside span:nth-child(8) {
+	-webkit-transform:rotate(225deg);
+	transform:rotate(225deg);
+}
+.contest .boiler .outside span:nth-child(8) em {
+	background:url('../img/boiler/outside_icon8.png') no-repeat center center;
+	-webkit-transform:rotate(-205deg);
+	transform:rotate(-205deg);
+}
+.contest .boiler > div:hover .outside span:nth-child(8) em {
+	-webkit-transform:rotate(-205deg) scale(1.5);
+	transform:rotate(-205deg) scale(1.5);
+}
+
+@-webkit-keyframes outside {
+	0% { top:108px; height:280px; opacity:0; }
+	10% { opacity:1; }
+	50% { opacity:1; }
+	80% { top:-2px; height:500px; opacity:0; }
+}
+@keyframes outside {
+	0% { top:108px; height:280px; opacity:0; }
+	10% { opacity:1; }
+	50% { opacity:1; }
+	80% { top:-2px; height:500px; opacity:0; }
 }

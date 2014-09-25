@@ -282,6 +282,7 @@ $(document).ready(function() {
 		$('.photo p input').val($(this).val());
 	});
 	$('a.zoom').fancybox();
+	//$('.contest.waiting').next('.conditions').addClass('locked');
 });
 $(window).load(function() {
 	$('.pers1, .pers2, .pers3, .pers4').removeClass('pause');
