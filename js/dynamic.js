@@ -7,7 +7,7 @@
 			'filter': 'alpha(opacity=1)'
 		}, speed/20);
 		$('.pack .step'+step).animate({
-			'top': '66px'
+			'top': '116px'
 		}, speed*19/20);
 		$('.pack .step'+step).delay(speed).animate({
 			'opacity': '0',

@@ -584,8 +584,8 @@ button::-moz-focus-inner {
 }
 .contest .pack .img {
 	position:absolute;
-	left:42px;
-	top:86px;
+	left:59px;
+	top:92px;
 	z-index:5;
 }
 .contest .pack > div {
