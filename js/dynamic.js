@@ -286,14 +286,21 @@ $(document).ready(function() {
 });
 $(window).load(function() {
 	$('.pers1, .pers2, .pers3, .pers4').removeClass('pause');
-	var line = [
-		$('.contest').offset().top+$('.contest').height(),
-		$('.conditions').offset().top+$('.conditions').height(),
-		$('.winners').offset().top+$('.winners').height()-3,
-		$('.moreinfo').offset().top+$('.moreinfo').height(),
-		$('.results').offset().top+$('.results').height()-3,
-		$('.footer').offset().top+$('.footer').height()
-	]
+	if ( $('a.pers1, a.pers2, a.pers3').length > 0 ) {
+		var line = [
+			$('.contest').offset().top+$('.contest').height(),
+			$('.conditions').offset().top+$('.conditions').height(),
+			$('.winners').offset().top+$('.winners').height()-3,
+			$('.moreinfo').offset().top+$('.moreinfo').height(),
+			$('.results').offset().top+$('.results').height()-3,
+			$('.footer').offset().top+$('.footer').height()
+		]
+	}
+	if ( $('.about').length > 0 ) {
+		var line = [
+			$('.about').offset().top+$('.about').outerHeight()-17
+		]
+	}
 	var a = 0;
 	function pers1() {
 		$('.pers1').css({
