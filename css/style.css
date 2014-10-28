@@ -1033,6 +1033,29 @@ button::-moz-focus-inner {
 	height:207px;
 	background:url('../img/video_bg.png') no-repeat left top;
 }
+.video > div p {
+	overflow:hidden;
+	position:relative;
+	display:block;
+	width:284px;
+	height:207px;
+	color:#ffffff;
+	font-size:14px;
+	line-height:17px;
+	font-weight:normal;
+	margin:0;
+	background:url('../img/video_bg.png') no-repeat left top;
+}
+.video > div p span {
+	position:absolute;
+	left:48px;
+	top:107px;
+	width:180px;
+	text-align:center;
+}
+.video > div p span:first-child {
+	top:29px;
+}
 .video > div a:before {
 	content:'';
 	position:absolute;
@@ -1126,7 +1149,7 @@ button::-moz-focus-inner {
 	content:'';
 	position:absolute;
 	left:498px;
-	top:-46px;
+	top:-45px;
 	display:block;
 	width:141px;
 	height:89px;
